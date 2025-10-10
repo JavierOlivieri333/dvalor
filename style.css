@@ -1,0 +1,260 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* --- Encabezado y Navegación --- */
+.main-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #005A9E; /* Azul oscuro */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* Azul brillante */
+}
+
+/* --- Sección Hero --- */
+#hero {
+    background-image: url('Image_opaq26opaq26opaq.png'); /* Reemplaza con tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    height: 100vh;
+
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sombra para legibilidad */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* --- Sección de Servicios --- */
+#servicios {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    flex-basis: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card img {
+    width: 100%;
+    display: block;
+}
+
+.service-card h3 {
+    padding: 20px;
+    margin: 0;
+    background-color: #fff;
+}
+
+.icon-wrapper {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #005A9E;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* --- Sección de Socios --- */
+#partners {
+    padding: 40px 20px 60px;
+    text-align: center;
+}
+
+#partners h2 {
+    margin-bottom: 40px;
+    font-size: 1.5em;
+    color: #555;
+}
+
+.logos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logos-grid img {
+    max-height: 40px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.logos-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* --- Sección de Contacto --- */
+#contacto {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+#contacto h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.cta-button {
+    background-color: #005A9E;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #003D6B;
+}
+
+
+/* --- Pie de página --- */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+
+    #servicios {
+        flex-direction: column;
+    }
+
+    .service-card {
+        flex-basis: 100%;
+    }
+}
