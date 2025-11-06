@@ -257,4 +257,10 @@ nav ul li a:hover {
     .service-card {
         flex-basis: 100%;
     }
+    @media screen and (max-width: 768px)  {
+        .logo{
+            display: flex;
+            justify-content: center;
+        }
+    }
 }
